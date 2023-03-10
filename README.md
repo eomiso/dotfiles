@@ -2,6 +2,12 @@
 
 
 ## Case 1. Setting up a new dotfile
+
+```sh
+curl -s https://raw.githubusercontent.com/eomiso/dotfiles/main/install.sh | bash
+```
+
+
 ```sh
 git init --bare $HOME/.cfg
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
