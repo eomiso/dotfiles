@@ -1,7 +1,8 @@
-!/bin/bash
+#!/bin/bash
 
 # Use https url if needed
 git clone --bare git@github.com:eomiso/dotfiles.git $HOME/.cfg --branch main
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 function config {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
