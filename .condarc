@@ -1,0 +1,5 @@
+auto_activate_base: true
+channels:
+  - defaults
+  - conda-forge
+ssl_verify: true
