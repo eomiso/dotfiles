@@ -128,6 +128,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Cargo RUST
+export PATH="/Users/eomiso/.cargo/bin:$PATH"
+
+    
+
 # NVM scripts
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
