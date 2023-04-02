@@ -156,3 +156,9 @@ if [ -f '/Users/eomiso/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/eomiso/g
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/eomiso/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/eomiso/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Functions
+
+# Example Usage: terraform plan | terraform-targets | grep 'some pattern' | xargs -r --open-tty terraform apply
+terraform-targets () {
+  sed 's/\x1b\[[0-9;]*m//g' | grep -o '# [^( ]* ' | grep '\.' | sed " s/^# /-target '/; s/ $/'/; "
+}
