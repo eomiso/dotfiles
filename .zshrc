@@ -111,7 +111,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dotfile='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+
+# ssh-key
+ssh-add --apple-use-keychain ~/.ssh/diya-sum-rsa 
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -131,15 +136,15 @@ unset __conda_setup
 # Cargo RUST
 export PATH="/Users/eomiso/.cargo/bin:$PATH"
 
+# rbenv Ruby
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
     
 
 # NVM scripts
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export PATH="$(yarn global bin):$PATH"
-export NODE_PATH="$NODE_PATH:$HOME/.config/yarn/global/node_modules"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -162,3 +167,5 @@ if [ -f '/Users/eomiso/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/eo
 terraform-targets () {
   sed 's/\x1b\[[0-9;]*m//g' | grep -o '# [^( ]* ' | grep '\.' | sed " s/^# /-target '/; s/ $/'/; "
 }
+
+[[ -s "/Users/eomiso/.gvm/scripts/gvm" ]] && source "/Users/eomiso/.gvm/scripts/gvm"
