@@ -170,3 +170,7 @@ terraform-targets () {
 }
 
 [[ -s "/Users/eomiso/.gvm/scripts/gvm" ]] && source "/Users/eomiso/.gvm/scripts/gvm"
+
+# alias
+#
+alias gh="EDITOR=nvim gh"
