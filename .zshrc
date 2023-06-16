@@ -116,7 +116,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dotfile='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
 
 
 # >>> conda initialize >>>
