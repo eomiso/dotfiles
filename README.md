@@ -1,7 +1,7 @@
 # dotfiles
 
 
-## 1. Install
+## 1. Set up the git repository
 
 ```sh
 curl -s https://raw.githubusercontent.com/eomiso/dotfiles/main/setup-dotfile.sh | bash
@@ -9,6 +9,10 @@ curl -s https://raw.githubusercontent.com/eomiso/dotfiles/main/setup-dotfile.sh 
 
 Then set up your upstream folder
 ```sh
-config push -u origin <branch>
+dotfile push -u origin <branch>
 ```
 
+## 2. Install the packages
+```
+sh scripts/install_all.sh
+```
