@@ -15,6 +15,6 @@ else
   dotfile checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfile-backup/{}
 fi;
 dotfile checkout
-dotfile dotfile status.showUntrackedFiles no
+dotfile config status.showUntrackedFiles no
 
 alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
