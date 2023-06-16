@@ -2,7 +2,6 @@
 
 # Use https url if needed
 git clone --bare https://github.com/eomiso/dotfiles.git $HOME/.dotfile --branch main
-alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
 
 function dotfile {
    /usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME $@
@@ -17,3 +16,5 @@ else
 fi;
 dotfile checkout
 dotfile dotfile status.showUntrackedFiles no
+
+alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
