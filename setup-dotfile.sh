@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # Use https url if needed
-git clone --bare git@github.com:eomiso/dotfiles.git $HOME/.cfg --branch main
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+git clone --bare git@github.com:eomiso/dotfiles.git $HOME/.dotfile --branch main
+alias config='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
 
-function config {
+function dotfile {
    /usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME $@
 }
-mkdir -p .config-backup
-config checkout
+mkdir -p .dotfile-backup
+dotfile checkout
 if [ $? = 0 ]; then
-  echo "Checked out config.";
+  echo "Checked out dotfile.";
   else
     echo "Backing up pre-existing dot files.";
-    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
+    dotfile checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfile-backup/{}
 fi;
-config checkout
-config config status.showUntrackedFiles no
+dotfile checkout
+dotfile dotfile status.showUntrackedFiles no
