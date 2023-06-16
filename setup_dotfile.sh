@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Use https url if needed
-git clone --bare git@github.com:eomiso/dotfiles.git $HOME/.dotfile --branch main
+git clone --bare https://github.com/eomiso/dotfiles.git $HOME/.dotfile --branch main
 alias config='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
 
 function dotfile {
