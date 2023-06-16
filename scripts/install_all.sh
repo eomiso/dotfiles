@@ -17,7 +17,7 @@ script_dir="$(cd "($(dirname "${BASH_SOURCE[0]}")" && pwd)"
 installation_dir="$script_dir/$dirname"
 
 # Execute each shell script found in the directory
-for script_file in "$installation_dir"/*.sh; do
+for script_file in $(find "$installation_dir" -name "*.sh"); do
   if [ "$script_file" != "$BASH_SOURCE" ]; then
     echo "Running $script_file"
     /bin/bash "$script_file"
