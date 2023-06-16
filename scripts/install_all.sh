@@ -3,6 +3,11 @@
 set -x
 set -o
 
+if [ -f "$HOME/.zshrc" ]; then
+  echo "Backing up ~/.zshrc to ~/.zshrc.bak"
+  mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
+fi
+
 dirname="installations"
 
 # Get the directory path of the current script
