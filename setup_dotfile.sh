@@ -12,7 +12,7 @@ if [ $? = 0 ]; then
   echo "Checked out dotfile.";
 else
   echo "Backing up pre-existing dot files.";
-  dotfile checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfile-backup/{}
+  dotfile checkout 2>&1 | egrep "\s+\." | awk {'print $2'} | xargs -I{} mv {} .dotfile-backup/{}
 fi;
 dotfile checkout
 dotfile config status.showUntrackedFiles no
