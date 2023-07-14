@@ -1,6 +1,3 @@
-# SSH key
-ssh-add --apple-use-keychain ~/.ssh/diya-sum-rsa
-
 #
 #
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -83,9 +80,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	zsh-autosuggestions
-	zsh-syntax-highlighting
 	autojump
 )
 
@@ -174,3 +168,7 @@ terraform-targets () {
 # alias
 #
 alias gh="EDITOR=nvim gh"
+
+
+# golang
+export GOROOT_BOOTSTRAP=/opt/homebrew/bin/go

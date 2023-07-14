@@ -20,7 +20,7 @@ fi
 
 echo "Installing Miniforge3"
 mkdir -p ~/miniforge3
-curl -o ~/miniforge3/install_miniforge.sh https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
+curl -L -o ~/miniforge3/install-miniforge.sh https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
 
-/bin/bash ~/miniconda3/install_miniforge.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/install_miniforge.sh
+/bin/bash ~/miniforge3/install-miniforge.sh -b -u -p ~/miniforge3
+rm -rf ~/miniforge3/install-miniforge.sh
