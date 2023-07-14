@@ -4,7 +4,7 @@
 ## 1. Set up the git repository
 
 ```sh
-curl -s https://raw.githubusercontent.com/eomiso/dotfiles/main/setup-dotfile.sh | bash
+curl -s https://raw.githubusercontent.com/eomiso/dotfiles/main/setup_dotfile.sh | bash
 ```
 
 Then set up your upstream folder
