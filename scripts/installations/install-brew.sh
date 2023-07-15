@@ -22,3 +22,6 @@ echo "Installing golang"
 brew install go
 
 echo "####### You might have to add export GOROOT_BOOTSTRAP=/opt/homebrew/bin/go to your dotfile(.zshrc, .bashrc) #######"
+
+echo "Installing rbenv"
+brew install rbenv
