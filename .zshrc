@@ -81,6 +81,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	autojump
+  fast-syntax-highlighting
+  zsh-autosuggestions
+  zsh-history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -112,21 +115,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/eomiso/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/eomiso/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/eomiso/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/eomiso/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+
 
 # Cargo RUST
 export PATH="/Users/eomiso/.cargo/bin:$PATH"
@@ -141,13 +133,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # M1 맥북에서 chromium, puppeteer를 위한 설정
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 
+# java
+export JABBA_HOME="$HOME/.jabba"
 [ -s "/Users/eomiso/.jabba/jabba.sh" ] && source "/Users/eomiso/.jabba/jabba.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -172,3 +163,29 @@ alias gh="EDITOR=nvim gh"
 
 # golang
 export GOROOT_BOOTSTRAP=/opt/homebrew/bin/go
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/eomiso/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/eomiso/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/eomiso/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/eomiso/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Direnv
+eval "$(direnv hook zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+# For Poetry
+export PATH="/Users/eomiso/.local/bin:$PATH"

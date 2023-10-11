@@ -221,7 +221,7 @@
           ]
         },
         {
-          "description": "option + h = mouse left",
+          "description": "option + h = alt + left arrow",
           "type": "basic",
           "from": {
             "key_code": "h",
@@ -237,9 +237,10 @@
           },
           "to": [
             {
-              "mouse_key": {
-                "x": -1600
-              }
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_option"
+              ]
             }
           ]
         },
@@ -883,7 +884,7 @@
           ]
         },
         {
-          "description": "option + l = mouse move right",
+          "description": "option + l = alt + right arrow",
           "type": "basic",
           "from": {
             "key_code": "l",
@@ -899,9 +900,10 @@
           },
           "to": [
             {
-              "mouse_key": {
-                "x": 1600
-              }
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_option"
+              ]
             }
           ]
         },
@@ -5436,6 +5438,10 @@
               "shell_command": "cat ~/.clip1 | pbcopy "
             },
             {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
+            },
+            {
               "key_code": "v",
               "modifiers": [
                 "left_command"
@@ -5487,6 +5493,10 @@
           "to": [
             {
               "shell_command": "cat ~/.clip2 | pbcopy "
+            },
+            {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
             },
             {
               "key_code": "v",
@@ -5542,6 +5552,10 @@
               "shell_command": "cat ~/.clip3 | pbcopy "
             },
             {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
+            },
+            {
               "key_code": "v",
               "modifiers": [
                 "left_command"
@@ -5593,6 +5607,10 @@
           "to": [
             {
               "shell_command": "cat ~/.clip4 | pbcopy "
+            },
+            {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
             },
             {
               "key_code": "v",
@@ -5648,6 +5666,10 @@
               "shell_command": "cat ~/.clip5 | pbcopy "
             },
             {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
+            },
+            {
               "key_code": "v",
               "modifiers": [
                 "left_command"
@@ -5699,6 +5721,10 @@
           "to": [
             {
               "shell_command": "cat ~/.clip6 | pbcopy "
+            },
+            {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
             },
             {
               "key_code": "v",
@@ -5754,6 +5780,10 @@
               "shell_command": "cat ~/.clip7 | pbcopy "
             },
             {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
+            },
+            {
               "key_code": "v",
               "modifiers": [
                 "left_command"
@@ -5805,6 +5835,10 @@
           "to": [
             {
               "shell_command": "cat ~/.clip8 | pbcopy "
+            },
+            {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
             },
             {
               "key_code": "v",
@@ -5860,6 +5894,10 @@
               "shell_command": "cat ~/.clip9 | pbcopy "
             },
             {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
+            },
+            {
               "key_code": "v",
               "modifiers": [
                 "left_command"
@@ -5912,6 +5950,11 @@
             {
               "shell_command": "cat ~/.clip0 | pbcopy "
             },
+            {
+              "key_code": "vk_none",
+              "hold_down_milliseconds": 100
+            },
+
             {
               "key_code": "v",
               "modifiers": [

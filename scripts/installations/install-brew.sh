@@ -25,3 +25,6 @@ echo "####### You might have to add export GOROOT_BOOTSTRAP=/opt/homebrew/bin/go
 
 echo "Installing rbenv"
 brew install rbenv
+
+echo "Installing gh (Github CLI)"
+brew install gh
