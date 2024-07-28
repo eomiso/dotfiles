@@ -189,3 +189,18 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # For Poetry
 export PATH="/Users/eomiso/.local/bin:$PATH"
+
+# For Poetry + Warp (https://github.com/warpdotdev/Warp/issues/3105)
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
+
+
+# Yarn
+export PATH="/Users/eomiso/.yarn/bin:$PATH"
+
+
+source /Users/eomiso/.config/broot/launcher/bash/br
+
+# For Expo (React Native)
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
