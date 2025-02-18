@@ -80,10 +80,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	autojump
+  autojump
   fast-syntax-highlighting
   zsh-autosuggestions
   zsh-history-substring-search
+  git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,6 +115,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
+alias gcn="git commit --no-verify"
+alias gca="git commit --amend"
+alias gcan="git commit --amend --no-verify"
+alias gcna="git commit --amend --no-verify"
+alias grbom="git rebase origin/main"
+alias gcoom="git checkout origin/main"
+alias pni="pnpm install"
+alias pn="pnpm run"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
