@@ -8,4 +8,4 @@ rm .zprofile
 rm .zshrc
 rm .condarc
 rm README.md
-rm setup_dotfile.sh
+rm setup-dotfile.sh

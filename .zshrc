@@ -200,7 +200,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PATH="/Users/eomiso/.local/bin:$PATH"
 
 # For Poetry + Warp (https://github.com/warpdotdev/Warp/issues/3105)
-printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
+# printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'
 
 
 # Yarn
