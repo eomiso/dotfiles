@@ -115,6 +115,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfile='/usr/bin/git --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
+alias lzdotfile='lazygit --git-dir=$HOME/.dotfile/ --work-tree=$HOME'
+alias lzg="lazygit"
+alias lzd="lazydocker"
 alias gcn="git commit --no-verify"
 alias gca="git commit --amend"
 alias gcan="git commit --amend --no-verify"
@@ -207,9 +210,22 @@ export PATH="/Users/eomiso/.local/bin:$PATH"
 export PATH="/Users/eomiso/.yarn/bin:$PATH"
 
 
-source /Users/eomiso/.config/broot/launcher/bash/br
-
 # For Expo (React Native)
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
