@@ -1,0 +1,4 @@
+[opener]
+open = [
+  { run = "sioyek %0", block = true, desc = "Open in sioyek", orphan = true }
+]
