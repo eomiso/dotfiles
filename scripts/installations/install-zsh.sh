@@ -20,8 +20,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH/themes/po
 echo
 
 installing "fast-syntax-highlighting"
-git clone --depth=1 https://github.com/zdharma/fast-syntax-highlighting.git "$ZSH/plugins/fast-syntax-highlighting"
-
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
+  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
 installing "zsh-autosuggestions"
 git clone https://github.com/zsh-users/zsh-autosuggestions "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions"
 
